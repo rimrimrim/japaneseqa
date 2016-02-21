@@ -11,6 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20160220170416) do
 
   create_table "micropoosts", force: :cascade do |t|
@@ -21,6 +22,9 @@ ActiveRecord::Schema.define(version: 20160220170416) do
   end
 
   add_index "micropoosts", ["user_id"], name: "index_micropoosts_on_user_id"
+=======
+ActiveRecord::Schema.define(version: 20160220074311) do
+>>>>>>> user-profile
 
   create_table "microposts", force: :cascade do |t|
     t.integer  "user_id"

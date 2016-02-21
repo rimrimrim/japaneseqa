@@ -7,7 +7,10 @@ root to: 'static_pages#home'
 
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+<<<<<<< HEAD
   resources :micropoosts
+=======
+>>>>>>> user-profile
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

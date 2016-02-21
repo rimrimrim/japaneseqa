@@ -7,5 +7,9 @@ class User < ActiveRecord::Base
                     uniqueness: { case_sensitive: false }
     has_secure_password
     
+<<<<<<< HEAD
     has_many :micropoosts
+=======
+    validates :country,length: { in: 1..50 }
+>>>>>>> user-profile
 end
