@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<div id="word_body">
+<div id="word_kanji">
+<p>
+  <%= @kanji.word %>
+</p>
+</div>
+
+<div id="word_yomi">
+<p>
+<%= @kanji.yomi %>
+</p>
+</div>
+
+<div id="word_japanese">
+<p>
+<%= @kanji.japanese %>
+</p>
+</div>
+
+<div id="word_english">
+<p>
+<%= @kanji.english %>
+</p>
+</div>
+</div>
+<%= link_to 'Edit', edit_kanji_path(@kanji) %> |
+<%= link_to 'Back', kanjis_path %>

@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :kanjis
+  get 'quizzes/quiz'
+  get 'quizzes/answer'
+  get 'quizzes/add'
+
 root to: 'static_pages#home'
   get    'signup', to: 'users#new'
   get    'login' , to: 'sessions#new'
@@ -10,6 +15,9 @@ root to: 'static_pages#home'
       get :followings
       get :followers
     end
+  end
+  resources :posts do
+    get "bookmarks/toggle"
   end
   resources :sessions, only: [:new, :create, :destroy]
   resources :relationships, only: [:create, :destroy, :show]

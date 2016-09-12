@@ -1,0 +1,37 @@
+<%= form_for(@kanji) do |f| %>
+  <% if @kanji.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@kanji.errors.count, "error") %> prohibited this kanji from being saved:</h2>
+
+      <ul>
+      <% @kanji.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :rank %><br>
+    <%= f.number_field :rank %>
+  </div>
+  <div class="field">
+    <%= f.label :word %><br>
+    <%= f.text_field :word %>
+  </div>
+  <div class="field">
+    <%= f.label :yomi %><br>
+    <%= f.text_field :yomi %>
+  </div>
+  <div class="field">
+    <%= f.label :japanese %><br>
+    <%= f.text_field :japanese %>
+  </div>
+  <div class="field">
+    <%= f.label :english %><br>
+    <%= f.text_field :english %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

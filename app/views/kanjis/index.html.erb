@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+<h1>Listing Kanjis</h1>
+    <% @kanjis.each do |kanji| %>
+    <%= link_to '#', id: 'bookmark-link' do %>
+      <i class="fa fa-bookmark fa-2x"></i>
+    <% end %>
+        <div id="word_body">
+          <div id="word_kanji">
+            <%= kanji.word %>
+          </div>
+          <div id="word_yomi">
+            <%= kanji.yomi %>
+          </div>
+          <div id="word_japanese">
+            <%= kanji.japanese %>
+          </div>
+          <div id="word_english">
+            <%= kanji.english %>
+          </div>
+            <%= link_to 'Show', kanji %>
+        </div>
+    <% end %>
+<br>
+
+<%= link_to 'New Kanji', new_kanji_path %>

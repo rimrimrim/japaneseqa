@@ -1,5 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome";
 
 /* universal */
 
@@ -192,4 +193,31 @@ span.picture {
 
 .followings-followers {
   float:left;
+}
+
+#word_kanji{
+  font-size: 50px;
+  float: left;
+  padding-right: 20px;
+}
+
+#word_yomi{
+}
+#word_japanese{
+}
+#word_english{
+}
+
+#word_body{
+  color: #fff;
+      background: #f08080;
+      padding: 20px;
+      border: 1px dashed rgba(255,255,255,0.8);
+      box-shadow: 0 0 0 5px #f08080;
+      -moz-box-shadow: 0 0 0 5px #f08080;
+      -webkit-box-shadow: 0 0 0 5px #f08080;
+}
+
+.i{
+  padding-left: 100px; 
 }
